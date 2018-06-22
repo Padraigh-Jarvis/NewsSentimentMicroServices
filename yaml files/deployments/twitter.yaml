@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: twitter
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "assignment2"
+        service: "twitter"
+    spec:
+      containers:
+        - name: twitter
+          image: "padarighj/ddms-assignment2-twitter:latest"
+         

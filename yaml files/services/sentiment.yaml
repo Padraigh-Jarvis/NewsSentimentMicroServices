@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: "sentiment"
+spec:
+  selector:
+    app: "assignment2"
+    service: "sentiment"
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 80

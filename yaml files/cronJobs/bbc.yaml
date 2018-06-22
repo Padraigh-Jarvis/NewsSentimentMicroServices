@@ -1,0 +1,14 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: bbc
+spec:
+  schedule: "0 */6 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: bbc
+            image: "padarighj/ddms-assignment2-bbc:latest"
+          restartPolicy: OnFailure

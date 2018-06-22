@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: "databaseaccess"
+spec:
+  selector:
+    app: "assignment2"
+    service: "databaseaccess"
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 80

@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: setiment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "assignment2"
+        service: "sentiment"
+    spec:
+      containers:
+        - name: sentiment
+          image: "padarighj/ddms-assignment2-sentiment:latest"
+         
